@@ -1,0 +1,35 @@
+// Interop101Part3_ATL.idl : IDL source for Interop101Part3_ATL
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Interop101Part3_ATL.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(50850CA8-75BE-4C44-8A96-AB0E8FD7E13E),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IHelloWorldWrapper : IDispatch{
+	[id(1)] HRESULT SayThis([in] BSTR phrase);
+};
+[
+	uuid(9C4C5ED2-8180-4F19-ACE2-67479D651C15),
+	version(1.0),
+]
+library Interop101Part3_ATLLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(FA8BDA6C-622B-4EBD-8AD3-62DAE13CB813)		
+	]
+	coclass HelloWorldWrapper
+	{
+		[default] interface IHelloWorldWrapper;
+	};
+};
+

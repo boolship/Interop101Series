@@ -1,0 +1,26 @@
+HKCR
+{
+	Inerop101Part3_ATL.HelloWorldWrapper.1 = s 'HelloWorldWrapper Class'
+	{
+		CLSID = s '{FA8BDA6C-622B-4EBD-8AD3-62DAE13CB813}'
+	}
+	Inerop101Part3_ATL.HelloWorldWrapper = s 'HelloWorldWrapper Class'
+	{		
+		CurVer = s 'Inerop101Part3_ATL.HelloWorldWrapper.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {FA8BDA6C-622B-4EBD-8AD3-62DAE13CB813} = s 'HelloWorldWrapper Class'
+		{
+			ProgID = s 'Inerop101Part3_ATL.HelloWorldWrapper.1'
+			VersionIndependentProgID = s 'Inerop101Part3_ATL.HelloWorldWrapper'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{9C4C5ED2-8180-4F19-ACE2-67479D651C15}'
+			Version = s '1.0'
+		}
+	}
+}

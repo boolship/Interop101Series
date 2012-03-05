@@ -1,0 +1,4 @@
+LIBRARY HELLOWORLDPART2
+EXPORTS
+	CHelloWorld::CHelloWorld(void)
+	CHelloWorld::~CHelloWorld(void)
