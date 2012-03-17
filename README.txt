@@ -16,7 +16,7 @@ Referenced Blog Articles
 // https ://blogs.msdn.com/b/borisj/archive/2006/09/02/737144.aspx
 
 // Interop 101 - Part 4
-// https://blogs.msdn.com/b/borisj/archive/2006/09/28/769708.aspx
+// https ://blogs.msdn.com/b/borisj/archive/2006/09/28/769708.aspx
 
 // Interop 101 - Part 5
 // https ://blogs.msdn.com/b/borisj/archive/2007/02/09/interop-101-part-5.aspx
