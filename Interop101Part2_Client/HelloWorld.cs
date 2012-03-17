@@ -33,11 +33,11 @@ namespace Interop101Part2_CLRClient
 		/// <returns>
 		/// instance of CHelloWorld
 		/// </returns>
-		[DllImport("HelloWorldPart2.dll", EntryPoint = "CHelloWorld_New")]
+		[DllImport("HelloWorldPart2.dll", EntryPoint = "HelloWorld_New")]
 		public static extern IntPtr NewHelloWorld();
 
-		////                                                ??1CHelloWorld@@QAE@XZ
-		////[DllImport("HelloWorldPart2.dll", EntryPoint = "??1CHelloWorld@@QAE@XZ")]
+		////                                                ??1HelloWorld@@QAE@XZ
+		////[DllImport("HelloWorldPart2.dll", EntryPoint = "??1HelloWorld@@QAE@XZ")]
  
 		/// <summary>
 		/// pinvoke version of CHelloWorld_Delete
@@ -45,7 +45,7 @@ namespace Interop101Part2_CLRClient
 		/// <param name="hw">
 		/// The hw instance.
 		/// </param>
-		[DllImport("HelloWorldPart2.dll", EntryPoint = "CHelloWorld_Delete")]
+		[DllImport("HelloWorldPart2.dll", EntryPoint = "HelloWorld_Delete")]
 		public static extern void DeleteHelloWorld(IntPtr hw);
 
 		/// <summary>
@@ -63,8 +63,8 @@ namespace Interop101Part2_CLRClient
 			[MarshalAs(UnmanagedType.LPStr)]
 			string m);
 
-		////                                                ?SayThis@CHelloWorld@@QAEXPA_W@Z
-		////[DllImport("HelloWorldPart2.dll", EntryPoint = "?SayThis@CHelloWorld@@QAEXPA_W@Z", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.ThisCall)]
+		////                                                ?SayThis@HelloWorld@@QAEXPA_W@Z
+		////[DllImport("HelloWorldPart2.dll", EntryPoint = "?SayThis@HelloWorld@@QAEXPA_W@Z", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.ThisCall)]
 		
 		/// <summary>
 		/// pinvoke version of SayThis
@@ -75,7 +75,7 @@ namespace Interop101Part2_CLRClient
 		/// <param name="phrase">
 		/// The phrase.
 		/// </param>
-		[DllImport("HelloWorldPart2.dll", EntryPoint = "?SayThis@CHelloWorld@@QAEXPA_W@Z", CharSet = CharSet.Unicode,
+		[DllImport("HelloWorldPart2.dll", EntryPoint = "?SayThis@HelloWorld@@QAEXPA_W@Z", CharSet = CharSet.Unicode,
 			CallingConvention = CallingConvention.ThisCall)]
 		public static extern void SayThis(IntPtr thisptr, string phrase);
 

@@ -1,3 +1,7 @@
+---------------------
+REFERENCE
+---------------------
+
 Interop101Series Solution
 
 Referenced Blog Articles
@@ -25,7 +29,29 @@ Referenced Blog Articles
 // (4) Client in C# calls the native code via a C++/CLI wrapper
 // (5)(a) Native client calls the C# code (DLL) via C++/CLI wrapper and (b) CLR Client calls C# code (DLL)
 
+---------------------
 
+---------------------
+TODO
+---------------------
+
+** MANUALLY WIRE-UP COM DLL
+
+Projects: Interop101Part3_ATL & Interop101Part3_ATLPS
+
+Manual workaround for register DLL
+
+*** As Administrator *** Launch Visual Studio Command Prompt (2010) *** As Administrator ***
+
+c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC>
+
+regsvr32 /u "C:\Users\admin\Documents\Visual Studio 2010\Projects\Interop101Series\Release\Interop101Part3_ATL.dll"
+regsvr32 "C:\Users\admin\Documents\Visual Studio 2010\Projects\Interop101Series\Release\Interop101Part3_ATL.dll"
+
+---------------------
+
+---------------------
+NOTES
 ---------------------
 
 :: Part 0 Notes
@@ -44,12 +70,17 @@ C++/CLI CLR client  calls native DLL project
 
 :: Part 2 Notes
 
+copy \Interop101Series\Debug\HelloWorldPart2.dll into \Interop101Series\Interop101Part2_Client\bin\Debug
+ditto for Release
+ditto for EVERY CHANGE to HelloWorldPart2.dll
+
+*** As Administrator *** Launch Visual Studio Command Prompt (2010) *** As Administrator ***
+
 cd C:\Users\admin\Documents\Visual Studio 2010\Projects\Interop101Series\Debug
 cd C:\Users\admin\Documents\Visual Studio 2010\Projects\Interop101Series\Debug
 
 dumpbin /exports HelloWorldPart2.dll
 dumpbin /exports HelloWorldPart2.dll
-
 
 C:\Users\admin\Documents\Visual Studio 2010\Projects\Interop101Series\Debug>dumpbin /exports HelloWorldPart2.dll
 Microsoft (R) COFF/PE Dumper Version 10.00.40219.01
@@ -63,7 +94,7 @@ File Type: DLL
   Section contains the following exports for HelloWorldPart2.dll
 
     00000000 characteristics
-    4F5155D8 time date stamp Fri Mar 02 18:20:56 2012
+    4F63C4F2 time date stamp Fri Mar 16 18:55:46 2012
         0.00 version
            1 ordinal base
            8 number of functions
@@ -71,14 +102,14 @@ File Type: DLL
 
     ordinal hint RVA      name
 
-          1    0 00011064 ??0CHelloWorld@@QAE@XZ = @ILT+95(??0CHelloWorld@@QAE@XZ)
-          2    1 0001101E ??1CHelloWorld@@QAE@XZ = @ILT+25(??1CHelloWorld@@QAE@XZ)
-          3    2 000110E6 ??4CHelloWorld@@QAEAAV0@ABV0@@Z = @ILT+225(??4CHelloWorld@@QAEAAV0@ABV0@@Z)
-          4    3 0001100F ?SayThis@CHelloWorld@@QAEXPA_W@Z = @ILT+10(?SayThis@CHelloWorld@@QAEXPA_W@Z)
-          5    4 00011023 ?fnHelloWorld@@YAHXZ = @ILT+30(?fnHelloWorld@@YAHXZ)
+          1    0 0001118B ??0HelloWorld@@QAE@XZ = @ILT+390(??0HelloWorld@@QAE@XZ)
+          2    1 0001107D ??1HelloWorld@@QAE@XZ = @ILT+120(??1HelloWorld@@QAE@XZ)
+          3    2 00011023 ??4HelloWorld@@QAEAAV0@ABV0@@Z = @ILT+30(??4HelloWorld@@QAEAAV0@ABV0@@Z)
+          4    3 000110F0 ?SayThis@HelloWorld@@QAEXPA_W@Z = @ILT+235(?SayThis@HelloWorld@@QAEXPA_W@Z)
+          5    4 0001101E ?fnHelloWorld@@YAHXZ = @ILT+25(?fnHelloWorld@@YAHXZ)
           6    5 00017130 ?nHelloWorld@@3HA = ?nHelloWorld@@3HA (int nHelloWorld)
-          7    6 00011028 CHelloWorld_Delete = @ILT+35(_CHelloWorld_Delete)
-          8    7 0001115E CHelloWorld_New = @ILT+345(_CHelloWorld_New)
+          7    6 0001112C HelloWorld_Delete = @ILT+295(_HelloWorld_Delete)
+          8    7 0001100F HelloWorld_New = @ILT+10(_HelloWorld_New)
 
   Summary
 
@@ -151,4 +182,5 @@ ditto for EVERY CHANGE to HelloWorldPart5.dll
 
 ---------------------
 
+---------------------
 

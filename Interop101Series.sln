@@ -37,6 +37,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Interop101Part3_ATLPS", "In
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Miscellaneous", "Miscellaneous", "{E165486D-093B-4A3B-8B14-9A10878DE890}"
 	ProjectSection(SolutionItems) = preProject
+		copy_part2.cmd = copy_part2.cmd
+		copy_part4.cmd = copy_part4.cmd
+		copy_part5.cmd = copy_part5.cmd
 		README.txt = README.txt
 	EndProjectSection
 EndProject

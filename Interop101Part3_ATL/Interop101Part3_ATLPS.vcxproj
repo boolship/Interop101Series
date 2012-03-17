@@ -45,6 +45,7 @@
       <AdditionalDependencies>kernel32.lib;rpcns4.lib;rpcrt4.lib;oleaut32.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>Interop101Part3_ATLPS.def</ModuleDefinitionFile>
       <RegisterOutput>true</RegisterOutput>
+      <PerUserRedirection>false</PerUserRedirection>
     </Link>
     <PreBuildEvent>
       <Command>if exist dlldata.c goto :END
@@ -66,6 +67,7 @@ Exit 1
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <RegisterOutput>true</RegisterOutput>
+      <PerUserRedirection>false</PerUserRedirection>
     </Link>
     <PreBuildEvent>
       <Command>if exist dlldata.c goto :END
